@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://thymeleaf.org">
+<head th:insert="parts/common :: copy"></head>
+<body>
+<div th:insert="parts/navbar :: copy"></div>
+<div class="container mt-5">
+    <strong class="card-text">Добавить нового пользователя</strong>
+    <div th:text="${message}"></div>
+    <form class="form-inline" th:action="@{/reg}" method="POST">
+        <div class="col-md-6 mb-3">
+            <label> Имя Пользователя:</label> <input class="form-control" type="text" name="username"/>
+        </div>
+        <div class="col-md-6 mb-3">
+            <label> Пароль: </label> <input class="form-control" type="password" name="password"/>
+        </div>
+        <div class="col-md-6 mb-3">
+            <label> Email: </label> <input class="form-control" type="email" name="email"/>
+        </div>
+        <button class="btn btn-primary col-md-2" type="submit" value="Sign In"/>
+        Оправить</button>
+    </form>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+</html>
